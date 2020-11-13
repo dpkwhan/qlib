@@ -1,0 +1,24 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Convert a file or directory to a file handle.
+//
+// @param fd {string|symbol|hsym} A file or directory or a file handle to a file or directory
+//
+// @returns {hsym} A file handle
+//
+// @example Convert a string to a file handle
+// .fs.asFileHandle "/home/dhan/afile.txt"
+// 
+// @example Convert a symbol to a file handle
+// .fs.asFileHandle `$"/home/dhan/"
+//
+// @example Return itself for a file handle
+// .fs.asFileHandle `:/home/dhan/
+
+{[fd]
+  if[type[fd] in -10 10h; fd: `$fd];
+  
+  :hsym fd;
+  }

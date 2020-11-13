@@ -1,0 +1,19 @@
+feature .fs.deleteDirRecursive
+  before
+    dir:: `:/home/dhan/dir1/another.csv`:/home/dhan/dir1`:/home/dhan/afile.txt;
+    mf1:: {[x; y] show y; x}[dir;];
+    mf2:: {x};
+    .qu.stub.mock ((`listDirRecursive; mf1); (`hdel; mf2));
+
+  after
+    .qu.stub.restoreAll[];
+    delete dir,mf1,mf2 from `.;
+
+  should exhibit a behaviour
+    expect a specific result
+      / TODO How to mock a built-in function used inside a user-defined function?
+      / This does not work since hdel is used inside the function
+      / deleteDirRecursive (::)
+      /
+      / However the following works, but this does not test the function deleteDirRecursive
+      .qu.compare[`hdel each desc listDirRecursive (::); desc dir]

@@ -1,0 +1,21 @@
+feature .fs.asFileHandle
+  should convert a file of string format to a file handle
+    expect a file handle: `:/home/dhan/afile.txt
+      .qu.compare[.fs.asFileHandle "/home/dhan/afile.txt"; `:/home/dhan/afile.txt]
+      
+  should convert a file of symbol format to a file handle
+    expect a file handle `:/home/dhan/afile.txt
+      .qu.compare[.fs.asFileHandle `$"/home/dhan/afile.txt"; `:/home/dhan/afile.txt]
+      
+  should convert a directory of string format to a file handle
+    expect a file handle: `:/home/dhan
+      .qu.compare[.fs.asFileHandle "/home/dhan"; `:/home/dhan]
+      
+  should convert a directory of symbol format to a file handle
+    expect a file handle `:/home/dhan/
+      .qu.compare[.fs.asFileHandle `$"/home/dhan/"; `:/home/dhan/]
+      
+  should return itself for a file handle
+    expect a file handle `:/home/dhan/
+      .qu.compare[.fs.asFileHandle `:/home/dhan/; `:/home/dhan/]
+      

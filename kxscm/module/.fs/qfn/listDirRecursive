@@ -1,0 +1,24 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview List all files and directories under a given directory and its sub-directories, *i.e.* it finds all files and directories recursively.
+//
+// @param dir {string|symbol|hsym} A directory or a handle to a directory
+//
+// @returns {symbol[]} A list of files and directories
+//
+// @example List all files and directories under a given directory
+// .fs.listDirRecursive["C:/Users/david/Downloads"]
+//
+// @example List all files and directories under a given directory
+// .fs.listDirRecursive[`$"C:/Users/david/Downloads"]
+
+{[dir]
+  fh: asFileHandle dir;
+  
+  $[11h=type d:key fh;
+    raze fh,.z.s each` sv/:fh,/:d;
+    d
+    ]
+  }
