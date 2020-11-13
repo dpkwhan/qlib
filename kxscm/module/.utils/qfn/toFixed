@@ -1,0 +1,26 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Format numerical values to a given decimal place.
+//
+// @param n {integer} Number of decimal points
+// @param v {number|number[]} A single number or a list of numbers
+//
+// @returns {string|string[]} A string or a list of strings
+// 
+// @example Format a single number to 2 decimal places
+// .utils.toFixed[2; 3.1415926]
+//
+// @example Format a list of numbers to 2 decimal places
+// .utils.toFixed[2;] 1.2 123 1.235 -123.5522
+//
+// @example Format a list of numbers of mixed types to 3 decimal places
+// .utils.toFixed[3;] (1.23456; 123j; 543i; -123.5522e)
+
+{[n; v]
+  v: $[0>type v; enlist v; v];
+  r: .Q.fmt'[n+1+count each string floor v; n; v];
+  
+  :$[1=count r; raze r; r];
+  }
