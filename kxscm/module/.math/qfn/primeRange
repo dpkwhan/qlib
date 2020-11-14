@@ -1,0 +1,7 @@
+// @fileOverview Enter a description here...
+// @returns {Type} Enter a return description here...
+{
+  c:range[x;y];         / candidates
+  lmt:"j"$sqrt last c;  / highest divisor to test
+  c where all 0<c mod/:range[2;lmt]
+  }

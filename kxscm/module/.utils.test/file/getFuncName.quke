@@ -1,0 +1,11 @@
+feature .utils.getFuncName
+  before
+    .test.myTestFunc:{.utils.getFuncName .z.s};
+
+  after
+    delete myTestFunc from `.test;
+
+  should return the function name as a string
+    expect the function name ".test.myTestFunc"
+      .qu.compare[.test.myTestFunc[];".test.myTestFunc"]
+      

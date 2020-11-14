@@ -1,0 +1,14 @@
+// @fileOverview Check whether the given input is an integer
+//
+// @param x {number} A number
+//
+// @returns {boolean} A boolean to indicate whether the input is an integer
+// 
+// @example Check whether a float is an integer
+// .math.isInteger 3.4
+// @example Check whether a short is an integer
+// .math.isInteger 6h
+
+{
+  .axq.isLong[x]|.axq.isInt[x]|.axq.isShort[x]
+  }

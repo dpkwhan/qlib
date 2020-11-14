@@ -1,0 +1,19 @@
+// @fileOverview Pause the process by the given number of seconds. This is platform independent, however it does not work if executed on a slave thread.
+//
+// @param secs {integer} number of seconds
+//
+// @returns {null}
+//
+// @example Pause the current process by 3 seconds
+// .fs.pause[3]
+
+{[secs]
+  n:"j"$secs;
+  if[n<=0;'"secs should be a positive number"];
+  
+  :$[
+    .z.o in `w32`w64;system "timeout /T ",string n;
+    .z.o in `l32`l64;system "sleep ", string n;
+    '"Pause is not supported on ",string[.z.o],". Please update ", .utils.getFuncName .z.s
+    ];
+  }

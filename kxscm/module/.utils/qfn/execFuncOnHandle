@@ -1,0 +1,38 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Execute a function on a handle to a remote q session
+//
+// @param h {hsym} a handle to a remote q session
+// @param fn {symbol} a function name
+// @param p {any[]} a list of parameters
+//
+// @returns {any} Return the result of the function call
+//
+// @example Execute a function without parameter
+// twoSquared:{2*2};
+// h:hopen `:localhost:5000;
+// res:.utils.execFuncOnHandle[h;`twoSquared;(::)];
+// hclose h;
+// show res;
+//
+// @example Execute a function with one single parameter
+// tc:('[til;count]);
+// h:hopen `:localhost:5000;
+// res:.utils.execFuncOnHandle[h;`tc;(4 5 6 7 8 9)];
+// hclose h;
+// show res;
+//
+// @example Execute a function with one multiple parameters
+// add:{x+y};
+// h:hopen `:localhost:5000;
+// res:.utils.execFuncOnHandle[h;`add;(4;5)];
+// hclose h;
+// show res;
+
+{[h;fn;p]
+  p:$[0<count p;p;(::)];
+  op:$[1<count (get get fn)@1;.;@];
+  h({y[x;z]};(get fn);op;p)
+  }

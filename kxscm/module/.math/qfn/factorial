@@ -1,0 +1,16 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Calculate the factorial of a given positive integer.
+//
+// @param n {integer} An integer
+//
+// @returns {integer} An integer
+//
+// @example Compute the factorial of 5
+// .math.factorial 5
+
+{[n]
+  $[n<2;1;n*.z.s n-1]
+  }

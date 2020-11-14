@@ -1,0 +1,16 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Remove all files and directories under the given directory and its sub-directories.
+//
+// @param dir {string|symbol} A directory or file
+//
+// @returns {symbol[]} A list of files and directories deleted
+// 
+// @example Delete a directory recursively
+// .fs.rmdir `:/home/dhan/tmp/
+
+{[dir]
+  hdel each desc walk dir
+  }

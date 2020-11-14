@@ -1,0 +1,17 @@
+// @fileOverview Pause a random number of seconds between two numbers.
+//
+// @param minSecs {number} The number of seconds at which to start 
+// @param maxSecs {number} The number of seconds at which to stop
+//
+// @returns {null}
+
+{[minSecs;maxSecs]
+  if[minSecs<0;'"minSecs must be non-negative"];
+  if[maxSecs<0;'"maxSecs must be non-negative"];
+  if[maxSecs<minSecs;'"maxSecs must be greater than or equal to minSecs"];
+  
+  n:ceiling minSecs+rand floor 1+maxSecs-minSecs;
+  .log.inf "Pause ",string[n]," second"," s"n>1;
+  
+  :.fs.pause n;
+  }

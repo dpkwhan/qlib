@@ -1,0 +1,13 @@
+// @fileOverview Retrieve the function name.
+//
+// @param f {function} a function
+//
+// @returns {string} The function name of the given function
+//
+// @example Show the current function name
+// .ex.logFuncName:{.utils.getFuncName .z.s};
+// .ex.logFuncName[];
+
+{[f]
+  first -4#get f
+  }

@@ -2,17 +2,17 @@
 //
 // @kind function
 //
-// @fileOverview List all files and directories under a given directory and its sub-directories, *i.e.* it finds all files and directories recursively.
+// @fileOverview Recursively visit a directory and any sub-directories.
 //
 // @param dir {string|symbol|hsym} A directory or a handle to a directory
 //
 // @returns {symbol[]} A list of files and directories
 //
 // @example List all files and directories under a given directory
-// .fs.listDirRecursive["C:/Users/david/Downloads"]
+// .fs.walk["C:/Users/david/Downloads"]
 //
 // @example List all files and directories under a given directory
-// .fs.listDirRecursive[`$"C:/Users/david/Downloads"]
+// .fs.walk[`$"C:/Users/david/Downloads"]
 
 {[dir]
   fh: asFileHandle dir;
