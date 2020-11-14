@@ -1,0 +1,8 @@
+feature .math.groupSum
+  should sum numbers according to their groups
+    expect a list of numbers: 9 6
+      .qu.compare[9 6;groupSum[1 2 3 4 5;1 2 1 2 1]]
+    expect a list of numbers: 9 6 
+      .qu.compare[9 6;groupSum[1 2 3 4 5;`a`b`a`b`a]]
+    expect a list of numbers: 9 6
+      .qu.compare[9 6;groupSum[1 2 3 4 5;(`a;2;`a;2;`a)]]

@@ -1,0 +1,26 @@
+// @author David Han
+//
+// @fileOverview Sum numbers based on their group.
+//
+// @param x {number[]} a list of values
+// @param y {any[]} a list of groups
+//
+// @returns {number[]} A list of numbers
+//
+// @example Sum numbers according to a group of integers
+// .math.groupSum[1 2 3 4 5;1 2 1 2 1]
+//
+// @example Sum numbers according to a group of symbols
+// .math.groupSum[1 2 3 4 5;`a`b`a`b`a]
+//
+// @example Sum numbers according to a group of mixed type values
+// .math.groupSum[1 2 3 4 5;(`a;2;`a;2;`a)]
+
+{[x;y]
+  if[not .axq.isList x;'"The first argument must be a list"];
+  if[not .axq.isList y;'"The second argument must be a list"];
+  if[not all .axq.isNumber each x;'"Each element of the fist argument must be a number"];
+  if[count[x]<>count y;'"The two input lists must have equal length"];
+  
+  sum each x value group y
+  }
