@@ -1,9 +1,9 @@
 feature .fs.rmdir
   before
-    dir:: `:/home/dhan/dir1/another.csv`:/home/dhan/dir1`:/home/dhan/afile.txt;
-    mf1:: {[x; y] show y; x}[dir;];
-    mf2:: {x};
-    .qu.stub.mock ((`rmdir; mf1); (`hdel; mf2));
+    dir::`:/home/dhan/dir1/another.csv`:/home/dhan/dir1`:/home/dhan/afile.txt;
+    mf1::{[x; y] show y; x}[dir;];
+    mf2::{x};
+    .qu.stub.mock ((`walk; mf1); (`hdel; mf2));
 
   after
     .qu.stub.restoreAll[];
