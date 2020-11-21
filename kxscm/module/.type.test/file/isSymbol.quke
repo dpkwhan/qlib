@@ -1,0 +1,15 @@
+feature isSymbol
+
+  should check whether a given argument is a symbol atom
+    expect `abs is a symbol atom
+      .qu.compare[isSymbol `abc; 1b]
+      
+    expect 123 is not a symbol atom
+      .qu.compare[isSymbol 123; 0b]
+      
+    expect `ab`cd is not a symbol atom
+      .qu.compare[isSymbol `ab`cd; 0b]
+      
+    expect 12 34 is not a symbol atom
+      .qu.compare[isSymbol 12 34; 0b]
+    

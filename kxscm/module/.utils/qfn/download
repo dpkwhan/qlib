@@ -1,0 +1,31 @@
+// @fileOverview Download files and uncompress them.
+//
+// If the file to download is [http://www.example.com/afile.txt](http://www.example.com/afile.txt), 
+// then the base URL is [http://www.example.com/](http://www.example.com/).
+//
+// The extention name for compressed files include:
+// 
+// - ``.zip`` for zipped file
+// - ``.gz`` for gzipped file, and 
+// - ``.tar.gz`` for tarred and zipped file
+//
+// @param baseUrl {string} The base URL to download the file from
+// @param fileName {string|string[]} File(s) to download
+// @param extName {string} Extention name of compressed file
+// @param unzipFunc {function} A function to uncompress the downloaded file
+//
+// @returns {symbol} A file handle to the file downloaded
+//
+// @example Download the market volume history for U.S. equities market in 2020
+// baseUrl:"http://markets.cboe.com/us/equities/market_statistics/historical_market_volume/";
+// fileName:"market_history_2020.csv-dl";
+// .utils.download[baseUrl;fileName;"";""]
+//
+{[baseUrl;fileName;extName;unzipFunc]
+  if[0h=type fileName;:.z.s[baseUrl;;extName;unzipFunc] each fileName];
+  if[l~key l:`$":",fileName;:l];
+  ffn:fileName,extName;
+  if[()~key z:`$":",ffn;z 1: .Q.hg`$":",0N!baseUrl,ffn];
+  if[count unzipFunc;system 0N!unzipFunc," ",ffn];
+  l
+  }

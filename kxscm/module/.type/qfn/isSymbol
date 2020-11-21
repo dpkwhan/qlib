@@ -1,0 +1,8 @@
+// @fileOverview Check whether an argument is a symbol atom.
+//
+// @param x {any} Data to check type
+//
+// @returns {boolean} Whether the input is a symbol atom
+{
+  :-11h=type x;
+  }
