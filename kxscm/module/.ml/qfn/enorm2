@@ -1,0 +1,9 @@
+// @fileOverview Calculate the squared Euclidean norm.
+//
+// @param x {number} A numerical list
+//
+// @returns {number} Euclidean norm squared
+
+{
+  x wsum x
+  }

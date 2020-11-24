@@ -1,0 +1,7 @@
+// @qlintsuppress OVERWRITE_ARTIFACT INVALID_FUNCTION
+//
+// @fileOverview Calculate the Euclidean norm.
+//
+// @returns {number} Euclidean norm
+
+sqrt enorm2::
