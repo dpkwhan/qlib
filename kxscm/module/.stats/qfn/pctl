@@ -1,6 +1,4 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-// @author David Han
-//
 // @overview Calculate the percentile(s) of a list of numbers. The input percentile must be between 
 //           0 and 1. This function can calculate one single percentile or a list of percentiles.
 //

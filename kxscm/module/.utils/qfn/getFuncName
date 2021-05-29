@@ -1,5 +1,3 @@
-// @author David Han
-//
 // @overview Retrieve the function name.
 //
 // @param f {function} a function
