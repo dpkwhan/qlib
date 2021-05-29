@@ -2,9 +2,9 @@
 //
 // @kind function
 //
-// @fileOverview Convert a file or directory to a file handle.
+// @overview Convert a file or directory to a file handle symbol.
 //
-// @param fd {string|symbol|hsym} A file or directory or a file handle to a file or directory
+// @param fd {string|symbol|hsym} A file/directory or a handle to a file/directory
 //
 // @returns {hsym} A file handle
 //
@@ -18,7 +18,6 @@
 // .fs.asFileHandle `:/home/dhan/
 
 {[fd]
-  if[type[fd] in -10 10h; fd: `$fd];
-  
+  if[type[fd] in -10 10h;fd:`$fd];
   :hsym fd;
   }
