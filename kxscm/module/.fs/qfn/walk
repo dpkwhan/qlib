@@ -2,7 +2,7 @@
 //
 // @kind function
 //
-// @fileOverview Recursively visit a directory and any sub-directories.
+// @overview Recursively visit a directory and any sub-directories.
 //
 // @param dir {string|symbol|hsym} A directory or a handle to a directory
 //
@@ -15,10 +15,7 @@
 // .fs.walk[`$"C:/Users/david/Downloads"]
 
 {[dir]
-  fh: asFileHandle dir;
+  fh:asFileHandle dir;
   
-  $[11h=type d:key fh;
-    raze fh,.z.s each` sv/:fh,/:d;
-    d
-    ]
+  $[11h=type d:key fh;raze fh,.z.s each` sv/:fh,/:d;d]
   }
