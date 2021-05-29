@@ -1,8 +1,6 @@
 // @author David Han
 //
-// @kind function
-//
-// @Overview Format numerical values to a given decimal place.
+// @overview Format numerical values to a given decimal place.
 //
 // @param n {integer} Number of decimal points
 // @param v {number|number[]} A single number or a list of numbers

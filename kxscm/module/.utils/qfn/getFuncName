@@ -1,4 +1,6 @@
-// @fileOverview Retrieve the function name.
+// @author David Han
+//
+// @overview Retrieve the function name.
 //
 // @param f {function} a function
 //

@@ -1,4 +1,4 @@
-// @fileOverview Download files and uncompress them.
+// @overview Download files and uncompress them.
 //
 // If the file to download is [http://www.example.com/afile.txt](http://www.example.com/afile.txt), 
 // then the base URL is [http://www.example.com/](http://www.example.com/).
