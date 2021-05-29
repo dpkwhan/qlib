@@ -1,4 +1,6 @@
-// @fileOverview Check whether an argument is a symbol atom.
+// David Han
+//
+// @overview Check whether an argument is a symbol atom.
 //
 // @param x {any} Data to check type
 //
