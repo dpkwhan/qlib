@@ -1,14 +1,14 @@
 feature .math.factorial
   should correctly calculate the factorial of any given integer
     expect the factorial of 0 is 1
-      .qu.compare[factorial 0;1]
+      .qu.compare[.math.factorial 0;1]
       
     expect the factorial of 1 is 1
-      .qu.compare[factorial 1;1]
+      .qu.compare[.math.factorial 1;1]
       
     expect the factorial of 3 is 6
-      .qu.compare[factorial 3;6]
+      .qu.compare[.math.factorial 3;6]
       
     expect the factorial of 10 is 3628800
-      .qu.compare[factorial 10;3628800]
+      .qu.compare[.math.factorial 10;3628800]
       

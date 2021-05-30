@@ -1,4 +1,4 @@
 feature .math.pi
   should have the expected value
     expect 3.1415926
-      1e-6>abs PI-3.1415926
+      1e-6>abs .math.PI-3.1415926

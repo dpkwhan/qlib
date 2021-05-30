@@ -1,7 +1,0 @@
-// @qlintsuppress OVERWRITE_ARTIFACT INVALID_FUNCTION
-//
-// @fileOverview Calculate Manhattan distance.
-//
-// @returns {number} Manhattan distance
-
-mnorm (-)::
