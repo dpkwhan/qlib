@@ -1,0 +1,18 @@
+feature .stats.pctl
+  should calculate the correct percentile score
+    expect the median of 1 2 3 to be 2
+      .qu.compare[.stats.pctl[0.5;1 2 3];2]
+
+    expect the maximum number of 1 2 3 to be 3
+      .qu.compare[.stats.pctl[1.0;1 2 3];3];
+
+    expect the minimum number of 1 2 3 to be 1
+      .qu.compare[.stats.pctl[0.0;1 2 3];1];
+
+  should calculate the percentile score properly even when percentile is not within 0 and 1
+    expect the maximum number of 1 2 3 to be 3
+      .qu.compare[.stats.pctl[1.5;1 2 3];3]
+
+    expect the minimum number of 1 2 3 to be 1
+      .qu.compare[.stats.pctl[-1;1 2 3];1]
+    

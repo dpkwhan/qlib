@@ -15,5 +15,5 @@
 //
 // @returns {number|number[]} Percentile scores
 {[p;x]
-  x iasc[x] -1+ceiling p*count x
+  x iasc[x] (c-1)&0|-1+ceiling p*c:count x
   }

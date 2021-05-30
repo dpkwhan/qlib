@@ -1,0 +1,13 @@
+// @fileOverview Calculate the interquartile range, *i.e.* the difference between 75th and 25th 
+// percentile scores.
+//
+// @param x {number[]} a list of numbers
+//
+// @returns {number} The interquartile range
+//
+// @example Calculate the interquantile range for numbers from 1 to 100
+// .stats.iqr 1+til 100
+// /=> 50
+{
+  (-) . pctl[.75 .25;x]
+  }
