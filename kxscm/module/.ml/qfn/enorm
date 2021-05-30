@@ -1,6 +1,6 @@
 // @qlintsuppress OVERWRITE_ARTIFACT INVALID_FUNCTION
 //
-// @fileOverview Calculate the Euclidean norm.
+// @overview Calculate the Euclidean norm.
 //
 // @returns {number} Euclidean norm
 

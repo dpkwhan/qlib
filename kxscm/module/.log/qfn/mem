@@ -1,2 +1,0 @@
-/ build memory string
-{@[string"i"$(3#x)%mult m;2;,;unit m:mult bin x 2]}

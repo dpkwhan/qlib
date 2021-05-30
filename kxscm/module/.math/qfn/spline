@@ -1,4 +1,4 @@
-// @fileoverview Perform cubic spline interpolation of given data points, returning either table of 
+// @overview Perform cubic spline interpolation of given data points, returning either table of 
 //  data points obtained by the interpolation. If the x values are of categorical type, the index of 
 //  the table rows are used.
 // 

@@ -18,5 +18,5 @@
   v: $[0>type v; enlist v; v];
   r: .Q.fmt'[n+1+count each string floor v; n; v];
   
-  :$[1=count r; raze r; r];
+  $[1=count r; raze r; r]
   }

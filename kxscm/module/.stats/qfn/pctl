@@ -9,7 +9,7 @@
 // @example Compute the 25th,50th and 75th percentiles of a list of numbers
 // .stats.pctl[0.25 0.5 0.75;til 10]
 //
-// @returns {number|number[]} Percentiles
+// @returns {number|number[]} Percentile scores
 
 {[p;x]
   x iasc[x] -1+ceiling p*count x
