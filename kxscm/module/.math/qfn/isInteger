@@ -4,7 +4,7 @@
 //
 // @fileOverview Check whether the given input is an integer
 //
-// @param x {number} A number
+// @param x {any} An input
 //
 // @returns {boolean} A boolean to indicate whether the input is an integer
 // 

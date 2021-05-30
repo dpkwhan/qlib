@@ -8,9 +8,9 @@
 // @param p {number|number[]} The percentile(s) to calculate. Must between 0 and 1.
 // @param x {number[]} The list of numbers
 //
-// @example Compute the 25th percentile of a list of numbers
+// @example Compute the 25th percentile score of a list of numbers
 // .stats.pctl[0.25;til 10]
-// @example Compute the 25th,50th and 75th percentiles of a list of numbers
+// @example Compute the 25th, 50th and 75th percentile scores of a list of numbers
 // .stats.pctl[0.25 0.5 0.75;til 10]
 //
 // @returns {number|number[]} Percentile scores

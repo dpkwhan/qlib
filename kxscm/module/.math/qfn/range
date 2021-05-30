@@ -10,7 +10,8 @@
 // @returns {integer[]} A list of integers
 //
 // @example Find the range between 2 and 6
-// .math.range[2;6] / 2 3 4 5 6
+// .math.range[2;6]
+// /=> 2 3 4 5 6
 {[startVal;stopVal]
   if[not .math.isInteger startVal;'"startVal must be an integer"];
   if[not .math.isInteger stopVal;'"stopVal must be an integer"];

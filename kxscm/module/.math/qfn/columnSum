@@ -4,7 +4,7 @@
 //
 // @fileOverview Calculate the sum of each column in a matrix. 
 //
-// @param x {(number)[]} An matrix
+// @param x {number[][]} An matrix
 // 
 // @returns {number} The sum of each column in a matrix
 {[x]
