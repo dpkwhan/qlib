@@ -2,7 +2,7 @@
 //
 // @kind function
 //
-// @fileOverview Remove all files and directories under the given directory and its sub-directories.
+// @overview Remove all files and directories under the given directory and its sub-directories.
 //
 // @param dir {string|symbol} A directory or file
 //

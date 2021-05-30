@@ -1,4 +1,7 @@
-// @fileOverview Pause the process by the given number of seconds. This is platform independent, however it does not work if executed on a slave thread.
+// @kind function
+//
+// @overview Pause the process by the given number of seconds. This is platform independent, however 
+// it does not work if executed on a slave thread.
 //
 // @param secs {integer} number of seconds
 //
