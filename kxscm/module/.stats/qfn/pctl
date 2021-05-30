@@ -2,11 +2,14 @@
 //
 // @kind function
 //
-// @overview Calculate the percentile(s) of a list of numbers. The input percentile must be between 
-//           0 and 1. This function can calculate one single percentile or a list of percentiles.
+// @fileOverview Calculate the percentile(s) of a list of numbers. This function can calculate 
+//               score for one single percentile or a list of percentiles. The minimum is 
+//               returned for negative percentile and the maximum is returned for percentile 
+//               greater than 1.
 //
-// @param p {number|number[]} The percentile(s) to calculate. Must between 0 and 1.
-// @param x {number[]} The list of numbers
+// @param p {number|number[]} The percentile(s) to calculate, *e.g.* one single percentile or  
+//                            multiple percentils
+// @param x {number[]}        The list of numbers
 //
 // @example Compute the 25th percentile score of a list of numbers
 // .stats.pctl[0.25;til 10]
