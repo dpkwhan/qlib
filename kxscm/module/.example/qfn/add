@@ -1,0 +1,10 @@
+// @overview This is a simple example to demenstrate some issues.
+//
+// @param x {number} The first argument
+// @param y {number} The second argument
+//
+// @returns {number} Sum of two input numbers
+
+{
+  x+y
+  }
