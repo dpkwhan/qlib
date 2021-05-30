@@ -10,7 +10,7 @@
 // @returns {integer[]} A list of prime numbers
 
 {[x;y]
-  c:range[x;y];         / candidates
+  c:.math.range[x;y];         / candidates
   lmt:"j"$sqrt last c;  / highest divisor to test
   c where all 0<c mod/:range[2;lmt]
   }
