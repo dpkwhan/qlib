@@ -12,5 +12,5 @@
 {[x;y]
   c:.math.range[x;y];         / candidates
   lmt:"j"$sqrt last c;  / highest divisor to test
-  c where all 0<c mod/:range[2;lmt]
+  c where all 0<c mod/:.math.range[2;lmt]
   }
