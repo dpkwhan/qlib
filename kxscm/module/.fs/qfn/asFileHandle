@@ -16,7 +16,6 @@
 //
 // @example Return itself for a file handle
 // .fs.asFileHandle `:/home/dhan/
-
 {[fd]
   if[type[fd] in -10 10h;fd:`$fd];
   :hsym fd;

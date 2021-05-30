@@ -10,7 +10,6 @@
 // 
 // @example Delete a directory recursively
 // .fs.rmdir `:/home/dhan/tmp/
-
 {[dir]
   hdel each desc .fs.walk dir
   }

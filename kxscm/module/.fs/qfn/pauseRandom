@@ -4,7 +4,6 @@
 // @param maxSecs {number} The number of seconds at which to stop
 //
 // @returns {null}
-
 {[minSecs;maxSecs]
   if[minSecs<0;'"minSecs must be non-negative"];
   if[maxSecs<0;'"maxSecs must be non-negative"];

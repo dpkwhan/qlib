@@ -9,7 +9,6 @@
 //
 // @example Pause the current process by 3 seconds
 // .fs.pause[3]
-
 {[secs]
   n:"j"$secs;
   if[n<=0;'"secs should be a positive number"];
