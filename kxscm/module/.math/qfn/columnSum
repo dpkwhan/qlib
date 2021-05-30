@@ -8,6 +8,6 @@
 // 
 // @returns {number} The sum of each column in a matrix
 
-{
+{[x]
   sum x
   }
