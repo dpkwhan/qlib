@@ -10,7 +10,6 @@
 //
 // @example Compute the factorial of 5
 // .math.factorial 5
-
 {[n]
   $[n<2;1;n*.z.s n-1]
   }

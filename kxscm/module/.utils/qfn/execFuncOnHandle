@@ -1,3 +1,5 @@
+// @author David Han
+//
 // @kind function
 //
 // @fileOverview Execute a function on a handle to a remote q session
@@ -28,7 +30,6 @@
 // res:.utils.execFuncOnHandle[h;`add;(4;5)];
 // hclose h;
 // show res;
-
 {[h;fn;p]
   p:$[0<count p;p;(::)];
   op:$[1<count (get get fn)@1;.;@];

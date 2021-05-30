@@ -1,3 +1,7 @@
+// @author David Han
+//
+// @kind function
+//
 // @overview Calculate the percentile(s) of a list of numbers. The input percentile must be between 
 //           0 and 1. This function can calculate one single percentile or a list of percentiles.
 //
@@ -10,7 +14,6 @@
 // .stats.pctl[0.25 0.5 0.75;til 10]
 //
 // @returns {number|number[]} Percentile scores
-
 {[p;x]
   x iasc[x] -1+ceiling p*count x
   }

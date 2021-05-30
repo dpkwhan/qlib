@@ -12,7 +12,6 @@
 // .math.isInteger 3.4
 // @example Check whether a short is an integer
 // .math.isInteger 6h
-
 {[x]
   .axq.isLong[x]|.axq.isInt[x]|.axq.isShort[x]
   }

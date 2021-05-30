@@ -1,3 +1,7 @@
+// @author David Han
+//
+// @kind function
+//
 // @overview Format numerical values to a given decimal place.
 //
 // @param n {integer} Number of decimal points
@@ -13,7 +17,6 @@
 //
 // @example Format a list of numbers of mixed types to 3 decimal places
 // .utils.toFixed[3;] (1.23456; 123j; 543i; -123.5522e)
-
 {[n; v]
   v: $[0>type v; enlist v; v];
   r: .Q.fmt'[n+1+count each string floor v; n; v];

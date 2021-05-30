@@ -7,7 +7,6 @@
 // @param x {(number)[]} An matrix
 // 
 // @returns {number} The sum of each row in a matrix
-
 {[x]
   sum each x
   }

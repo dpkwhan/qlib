@@ -1,3 +1,7 @@
+// @author David Han
+//
+// @kind function
+//
 // @overview Retrieve the function name.
 //
 // @param f {function} a function
@@ -7,7 +11,6 @@
 // @example Show the current function name
 // .ex.logFuncName:{.utils.getFuncName .z.s};
 // .ex.logFuncName[];
-
 {[f]
   first -4#get f
   }

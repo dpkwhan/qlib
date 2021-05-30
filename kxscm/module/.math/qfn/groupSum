@@ -15,7 +15,6 @@
 //
 // @example Sum numbers according to a group of mixed type values
 // .math.groupSum[1 2 3 4 5;(`a;2;`a;2;`a)]
-
 {[x;y]
   if[not .axq.isList x;'"The first argument must be a list"];
   if[not .axq.isList y;'"The second argument must be a list"];

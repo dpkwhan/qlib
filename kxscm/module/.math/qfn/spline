@@ -11,7 +11,6 @@
 // @param y {symbol} A column from the table
 //
 // @returns {table} A table of data points after the cubic spline interpolation.
-
 {[tbl;x;y]
   if[98h<>type tbl;'"The first argument must be a table"];
   if[-11h<>type x;'"The second argument must be a symbol"];
