@@ -1,4 +1,4 @@
-// @overview Pause a random number of seconds between two numbers.
+// @fileOverview Pause a random number of seconds between two numbers.
 //
 // @param minSecs {number} The number of seconds at which to start 
 // @param maxSecs {number} The number of seconds at which to stop

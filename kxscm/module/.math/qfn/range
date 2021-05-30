@@ -1,4 +1,8 @@
-// @overview Find the range of integers between two integers. It is inclusive on both ends.
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Find the range of integers between two integers. It is inclusive on both ends.
 //
 // @param startVal {integer} An integer to start a range
 // @param stopVal {integer} An integer to stop a range

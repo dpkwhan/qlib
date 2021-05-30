@@ -2,7 +2,7 @@
 //
 // @kind function
 //
-// @overview Convert a file or directory to a file handle symbol.
+// @fileOverview Convert a file or directory to a file handle symbol.
 //
 // @param fd {string|symbol|hsym} A file/directory or a handle to a file/directory
 //

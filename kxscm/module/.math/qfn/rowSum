@@ -1,4 +1,8 @@
-// @overview Calculate the sum of each row in a matrix.
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Calculate the sum of each row in a matrix.
 // 
 // @param x {(number)[]} An matrix
 // 

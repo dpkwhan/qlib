@@ -1,5 +1,13 @@
-// @fileOverview Enter a description here...
-// @returns {Type} Enter a return description here...
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Calculate the sum of each column in a matrix. 
+//
+// @param x {(number)[]} An matrix
+// 
+// @returns {number} The sum of each column in a matrix
+
 {
   sum x
   }

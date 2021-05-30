@@ -1,6 +1,6 @@
 // @author David Han
 //
-// @fileOverview Sum numbers based on their group.
+// @overview Sum numbers based on their group.
 //
 // @param x {number[]} a list of values
 // @param y {any[]} a list of groups

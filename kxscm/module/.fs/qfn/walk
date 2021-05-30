@@ -2,7 +2,7 @@
 //
 // @kind function
 //
-// @overview Recursively visit a directory and any sub-directories.
+// @fileOverview Recursively visit a directory and any sub-directories.
 //
 // @param dir {string|symbol|hsym} A directory or a handle to a directory
 //

@@ -1,5 +1,13 @@
-// @fileOverview Enter a description here...
-// @returns {Type} Enter a return description here...
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Find all prime numbers between two integers.
+//
+// @param x {integer} the minimum integer of a range
+// @param y {integer} the maximum integer of a range
+//
+// @returns {integer[]} A list of prime numbers
 {
   c:range[x;y];         / candidates
   lmt:"j"$sqrt last c;  / highest divisor to test

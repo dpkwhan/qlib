@@ -1,8 +1,12 @@
-// @overview Perform cubic spline interpolation of given data points, returning either table of 
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Perform cubic spline interpolation of given data points, returning either table of 
 //  data points obtained by the interpolation. If the x values are of categorical type, the index of 
 //  the table rows are used.
 // 
-// @param tbl {table} A table
+// @param tbl {table (x:number;y:number)} A table
 // @param x {symbol} A column from the table
 // @param y {symbol} A column from the table
 //
