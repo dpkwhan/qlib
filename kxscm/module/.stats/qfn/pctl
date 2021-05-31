@@ -8,7 +8,7 @@
 //               greater than 1.
 //
 // @param p {number|number[]} The percentile(s) to calculate, *e.g.* one single percentile or  
-//                            multiple percentils
+//                            multiple percentiles
 // @param x {number[]}        The list of numbers
 //
 // @example Compute the 25th percentile score of a list of numbers
