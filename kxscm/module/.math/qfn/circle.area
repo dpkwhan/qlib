@@ -1,0 +1,13 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview Calculate the area of a circle.
+//
+// @param r {number} The radius of a circle
+//
+// @returns {number} Area of a circle
+{[r]
+  if[r<0;'"Radius must be non-negative"];
+  .const.PI*r*r
+  }
