@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is infinite
+//
+// @param x {#any} Data to check
+//
+// @returns {boolean} Indication of whether the input is infinite
+{
+  :x in .type.const.infinites;
+  }

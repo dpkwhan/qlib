@@ -1,0 +1,10 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Definition of interfaces and their implementing functions. 'implFunc' can be a 
+// function body or a symbol reference to a function.
+([lib:enlist `;
+  ifFunc:enlist `]
+  implFunc:enlist (::)
+  )

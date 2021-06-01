@@ -1,0 +1,6 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Function string to use for all ``.type.is*`` functions for higher performance
+"{ --TYPE--~type x }"

@@ -1,0 +1,43 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Binds the specified implementation function to the interface function reference.
+//
+// @param ifFunc {symbol} The interface function reference
+// @param implFunc {symbol|fn} The implementation function
+// @param overwrite {bool} If true any existing interface function will be overwritten. 
+// If false, it will be maintained
+//
+// @throws ImplementationFunctionDoesNotExistException If the implementation function is a reference 
+//         but doesn't exist
+// @throws InvalidImplementationFunctionException If the implementation function is a reference to 
+//         something that isn't a function
+//
+// @returns {null} Nothing
+//
+// @private
+{[ifFunc;implFunc;overwrite]
+  if[not 0=count key ifFunc;
+    if[not overwrite;
+      .if.i.log[`info;] "Not overwriting existing implementation for interface: ",string ifFunc;
+      :(::);
+      ];
+    ];
+  
+  if[.type.isSymbol implFunc;
+    if[not 1=count key implFunc;
+      .if.i.log[`error;] "Implementation does not exist for interface: ",string ifFunc;
+      '"ImplementationFunctionDoesNotExistException";
+      ];
+
+    implFunc:get implFunc;
+    ];
+
+  if[not .type.isFunction implFunc;
+    .if.i.log[`error;] "Implementation is not a function for interface: ",string ifFunc;
+    '"InvalidImplementationFunctionException";
+    ];
+  
+  set[ifFunc; implFunc];
+  }

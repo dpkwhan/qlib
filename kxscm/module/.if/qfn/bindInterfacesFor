@@ -1,0 +1,32 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Binds the defined implementation functions for the specified library
+//
+// @param bindLib {symbol} The library to change the interface bindings for
+// @param overwrite {boolean} If true, any existing interface implementation will be overwritten. 
+// If false, any existing implementation will be maintained
+// 
+// @throws MissingInterfaceImplementationException If any interface has been defined but no 
+// implementing function has been specified
+//
+// @returns {null} Nothing
+//
+// @see .if.cfg.interfaces
+// @see .if.i.bindFunction
+{[bindLib; overwrite]
+  interfaces:0!select from .if.cfg.interfaces where lib = bindLib;
+  if[0=count interfaces;:(::);];
+  
+  noImpls:select from interfaces where null implFunc;
+  
+  if[0<count noImpls;
+    .if.i.log[`error;] "Missing interface implementations for library: ",string bindLib;
+    .if.i.log[`error;] " Missing interfaces: ",", " sv string exec ifFunc from noImpls;
+    '"MissingInterfaceImplementationException";
+    ];
+  
+  .if.i.log[`info;] "Binding interface implementations to library: ",string bindLib;
+  .if.i.bindFunction[;;overwrite] ./: flip interfaces`ifFunc`implFunc;
+  }

@@ -1,0 +1,28 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Builds type checking functions ``.type.is*Type*`` and ``.type.is*Type*List`` 
+// from a string template function for highest performance.
+//
+// @param typeName {symbol} The name of the type to build the functions for
+//
+// @returns {null} Nothing
+//
+// @see .type.const.types
+//
+// @private
+{[typeName]
+  listType:`short$.type.const.types?typeName;
+  typeName:@[string typeName; 0; upper];
+  
+  atomName:`$"is",typeName;
+  listName:`$"is",typeName,"List";
+
+  set[` sv `.type,atomName;] get ssr[.type.const.typeFunc; "--TYPE--"; .Q.s1 neg listType];
+
+  / If type 0, don't create the list version
+  if[not listType = neg listType;
+    set[` sv `.type,listName;] get ssr[.type.const.typeFunc; "--TYPE--"; .Q.s1 listType];
+    ];
+  }

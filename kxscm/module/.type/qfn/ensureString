@@ -1,0 +1,20 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts to a string if not.
+//
+// @param x {any|symbol[]} Data to check
+//
+// @returns {symbol} A string version of the input
+{
+  $[.type.isString x;
+      :x;
+    .type.isDict[x] | .type.isTable[x] | .type.isMixedList x;
+      :.Q.s1 x;
+    .type.isTypedList x;
+      :", " sv .type.ensureString each x;
+    / else
+      :string x
+    ];
+  }

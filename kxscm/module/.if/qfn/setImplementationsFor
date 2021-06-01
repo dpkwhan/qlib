@@ -1,0 +1,23 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Adds interface implmentation configuration to the primary configuration table
+//
+// @param bindLib {symbol} The library to change the interface bindings for
+// @param ifMapping {table} Table of ``ifFunc`` - the interface function and ``implFunc`` the 
+// implementing function
+//
+// @throws InvalidInterfaceMappingException If the supplied column does not contain exactly 
+// ``ifFunc`` and ``implFunc`` columns
+//
+// @returns {null} Nothing
+//
+// @see .if.cfg.interfaces
+{[bindLib;ifMapping]
+  if[0 = count ifMapping;:(::);];
+  if[not all cols[ifMapping] in `ifFunc`implFunc;'"InvalidInterfaceMappingException";];
+
+  ifMapping:update lib:bindLib from ifMapping;
+  `.if.cfg.interfaces upsert ifMapping;
+  }

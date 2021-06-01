@@ -1,0 +1,11 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Initialize all types.
+//
+// @returns {null} Nothing
+{
+  types:.type.const.types where not null .type.const.types;
+  .type.i.setCheckFuncs each types;
+  }

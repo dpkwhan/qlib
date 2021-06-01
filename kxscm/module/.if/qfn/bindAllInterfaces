@@ -1,0 +1,17 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Binds the defined implementation functions to the defined interfaces in the 
+// interface configuration
+//
+// @param overwrite {boolean} If true, any existing interface implementation will be overwritten. 
+// If false, any existing implementation will be maintained
+//
+// @returns {null} Nothing
+//
+// @see .if.cfg.interfaces
+// @see .if.bindInterfacesFor
+{[overwrite]
+  .if.bindInterfacesFor[; overwrite] each exec distinct lib from .if.cfg.interfaces where not null lib;
+  }

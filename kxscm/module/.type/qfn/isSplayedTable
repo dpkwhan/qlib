@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is a splayed table
+//
+// @param x {#any} Data to check
+//
+// @returns {boolean} Indication of whether the input is a splayed table
+{
+  :0b~.Q.qp $[.type.isSymbol x;get;::] x;
+  }

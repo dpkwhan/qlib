@@ -1,0 +1,27 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Mapping of type name based on index in the list (matching .Q.t behaviour)
+(
+  `mixedList;
+  `boolean;
+  `guid;
+  `;
+  `byte;
+  `short;
+  `integer;
+  `long;
+  `real;
+  `float;
+  `character;
+  `symbol;
+  `timestamp;
+  `month;
+  `date;
+  `datetime;
+  `timespan;
+  `minute;
+  `second;
+  `time
+  )

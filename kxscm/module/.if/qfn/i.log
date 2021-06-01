@@ -1,0 +1,20 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview / Attempts to find a log implementation function in interface configuration to log 
+// internal interface management.
+//
+// @param level {symbol} The level of the message to log
+// @param msg {string} The message to log
+//
+// @returns {null} Nothing
+//
+// @see .if.cfg.interfaces
+//
+// @private
+{[level;msg]
+  logFunc:first exec ifFunc from .if.cfg.interfaces where lib=`log,ifFunc like ("*",string level);
+  if[null logFunc;:(::);];
+  get[logFunc] msg;
+  }

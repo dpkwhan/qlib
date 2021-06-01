@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is distinct
+//
+// @param x {#any} Data to check
+//
+// @returns {boolean} True if the input is distinct
+{
+  :x~distinct x;
+  }

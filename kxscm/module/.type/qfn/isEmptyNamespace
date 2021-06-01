@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is an empty namespace
+//
+// @param x {#any} Data to check
+//
+// @returns {boolean} Indication of whether the input is an empty namespace
+{
+  :x ~ 1#.q;
+  }

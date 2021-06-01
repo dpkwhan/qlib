@@ -1,0 +1,10 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Initializes the interface library.
+//
+// @returns {null} Nothing
+{
+  .if.bindAllInterfaces 0b;
+  }

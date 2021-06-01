@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is a function
+//
+// @param x {#any} Data to check
+//
+// @returns {boolean} Indication of whether the input is a function
+{
+  :type[x] in 100 101 102 103 104 105 106 107 108 109 110 111 112h;
+  }

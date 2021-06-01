@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is a host:port
+//
+// @param x {symbol|long} Data to check
+//
+// @returns {boolean} Indication of whether the input is a host:port
+{
+  :.type.isLong[x] | .type.isSymbol[x] & 2 <= count where ":" = string x;
+  }

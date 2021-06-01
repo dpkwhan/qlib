@@ -1,0 +1,14 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts to a symbol if not.
+//
+// @param x {any|symbol[]} Data to check
+//
+// @returns {symbol} A symbol version of the input
+{
+  if[.type.isSymbol[x] | .type.isSymbolList x;:x;];
+  if[.type.isNumber[x] | .type.isDateOrTime[x] | .type.isBoolean x;:`$string x;];
+  :`$x;
+  }

@@ -9,5 +9,5 @@
 //
 // @returns {boolean} Whether the input is a file path
 {
-  :isSymbol[x]&":"~first string x;
+  :.type.isSymbol[x]&":"~first string x;
   }

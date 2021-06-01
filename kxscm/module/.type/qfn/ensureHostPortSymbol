@@ -1,0 +1,15 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts to a host:port symbol.
+//
+// @param x {any} Data to check
+//
+// @returns {symbol} A valid host/port connection symbol, converting a port only input as 
+// appropriate
+{
+  if[not .type.isHostPort x;'"IllegalArgumentException";];
+  if[.type.isLong x;:`$"::",string x;];
+  :x;
+  }

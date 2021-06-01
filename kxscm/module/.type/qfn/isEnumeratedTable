@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the one or more columns of a table is enumerated.
+//
+// @param x {table} Data to check
+//
+// @returns {boolean} If one or more columns in the table are enumerated
+{
+  :any .type.isEnumeration each .Q.V x;
+  }
