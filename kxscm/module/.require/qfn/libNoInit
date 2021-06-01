@@ -1,0 +1,20 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Loads the specified library but does not initialise it. Useful if there is some 
+// configuration to perform after load, but prior to initialisation. When you are ready to 
+// initialise, use .require.lib.
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+//
+// @returns {null} Nothing
+//
+// @see .require.i.load
+{[libName]
+  if[libName in key .require.loadedLibs;
+    :(::);
+    ];
+  
+  .require.i.load libName;
+  }

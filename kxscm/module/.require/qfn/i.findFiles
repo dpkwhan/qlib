@@ -1,0 +1,18 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Searches for files with the specified library prefix in the source folder supplied.
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+// @param files {symbol[]} A list of files
+//
+// @returns {symbol[]} A list of files
+//
+// @see .require.fileSuffixes
+//
+// @private
+{[libName;files]
+  filesNoPath:last each ` vs/:files;
+  :files where any filesNoPath like/: string[libName],/:.require.fileSuffixes;
+  }

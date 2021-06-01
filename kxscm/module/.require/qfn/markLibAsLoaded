@@ -1,0 +1,15 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Marks the specified library as loaded in the loaded libraries table. NOTE: This
+// function does not actually do the load.
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+//
+// @returns {null} Nothing
+//
+// @see .require.loadedLibs
+{[libName]
+  .require.loadedLibs[libName]:`loaded`loadedTime!(1b;.z.P);
+  }

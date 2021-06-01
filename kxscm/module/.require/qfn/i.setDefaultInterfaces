@@ -1,0 +1,16 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Set the default interface implementations before the Interface library (if) is 
+// available.
+//
+// @returns {null} Nothing
+//
+// @see .require.interfaces
+//
+// @private
+{
+  res:0!delete from .require.interfaces where null[lib] | null ifFunc;
+  (set)./: flip res`ifFunc`implFunc;
+  }

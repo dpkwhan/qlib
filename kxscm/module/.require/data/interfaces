@@ -1,0 +1,9 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Required interface implementations for 'require' and related kdb-common libraries 
+// to function correctly
+([lib:``log`log`log`log`log`log;
+  ifFunc:``.log.if.trace`.log.if.debug`.log.if.info`.log.if.warn`.log.if.error`.log.if.fatal]
+  implFunc:(::;-1;-1;-1;-1;-2;-2))

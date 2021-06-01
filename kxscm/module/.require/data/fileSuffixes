@@ -1,0 +1,6 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview The file suffixes that are supported for a library
+(".q";".k";".*.q";".*.k";".q_";".*.q_")

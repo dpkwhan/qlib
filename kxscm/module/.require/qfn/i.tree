@@ -1,0 +1,19 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Finds all files under a given directory.
+//
+// @param root {symbol} Root directory for the library
+//
+// @returns {symbol[]} A list of files
+//
+// @private
+{[root]
+  rc:` sv/:root,/:key root;
+  rc:rc where not any rc like\:/:.require.location.ignore;
+
+  folders:.require.i.isFolder each rc;
+
+  :raze (rc where not folders),.z.s each rc where folders;
+  }

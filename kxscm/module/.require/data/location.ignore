@@ -1,0 +1,8 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Regexs to filter discovered files
+//
+// @see .require.i.tree
+("*.git";"*target")

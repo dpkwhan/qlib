@@ -1,0 +1,44 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Performs the initialisation of the specified library. Assumes ``.*lib*.init[]``. 
+// Also checks for ``.*lib*.*stack*.init[]`` and executes if exists (if not present, ignored).
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+//
+// @returns {null} Nothing
+//
+// @throws UnknownLibraryException If the library is not loaded
+// @throws LibraryInitFailedException If the init function throws an exception
+//
+// @private
+{[libName]
+  if[not libName in key .require.loadedLibs;
+    '"UnknownLibraryException";
+    ];
+
+  initFname:` sv `,libName,`init;
+  initF:@[get;initFname;`NO_INIT_FUNC];
+
+  if[not `NO_INIT_FUNC~initF;
+    .log.if.info "Library initialisation function detected [ Func: ",string[initFname]," ]";
+
+    / If in debug mode, execute init function without try/catch
+    $[`boolean$system"e";
+      initRes:initF (::);
+      initRes:@[initF;::;{ (`INIT_FUNC_ERROR;x) }]
+      ];
+    
+    if[`INIT_FUNC_ERROR~first initRes;
+      msg1:string[lib]," ]. Error - ",last initRes;
+      msg2:") failed to execute successfully [ Lib: ";
+      .log.if.error "Init function (",string[initFname],msg2,msg1;
+      '"LibraryInitFailedException (",string[initFname],")";
+      ];
+
+    .require.markLibAsInited libName;
+
+    .log.if.info "Initialised library: ",string libName;
+    ];
+  }

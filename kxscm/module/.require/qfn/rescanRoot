@@ -1,0 +1,12 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Rescan the root directory for libraries.
+//
+// @returns {null} Nothing
+{
+  .require.location.discovered:.require.i.tree .require.location.root;
+  fileCnt:count .require.location.discovered;
+  .log.if.info "Library root location refreshed [ File Count: ",string[fileCnt]," ]";
+  }

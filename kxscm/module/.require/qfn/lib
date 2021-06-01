@@ -1,0 +1,21 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Loads the specified libary and initialises it. Checks loaded and initialised 
+// state to prevent reload or re-init if already performed.
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+//
+// @returns {null} Nothing
+//
+// @see .require.i.load
+// @see .require.i.init
+{[libName]
+  if[libName in key .require.loadedLibs;
+    $[.require.loadedLibs[libName]`inited;:(::);:.require.i.init libName];
+    ];
+  
+  / Load and initialize the library
+  (.require.i.load;.require.i.init)@\:libName;
+  }

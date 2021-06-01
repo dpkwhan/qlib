@@ -1,0 +1,19 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Retrieves the current working directory.
+//
+// @returns {symbol} The current working directory using the OS specific command
+//
+// @throws OsNotSupportedForCwdException If the operating system is not supported
+//
+// @private
+{
+  osys:first string .z.o;
+
+  if["w"~osys;:hsym first `$trim system "echo %cd%";];
+  if[osys in "lms";:hsym first `$trim system "pwd";];
+
+  '"OsNotSupportedForCwdException (",string[.z.o],")";
+  }

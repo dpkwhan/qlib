@@ -1,0 +1,33 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Initialize the q session
+//
+// @param root {symbol} Root directory for the library
+//
+// @returns {null} Nothing
+{[root]
+  if[.require.loadedLibs[`require]`inited;
+    .log.if.trace "Require is already initialised. Will ignore request to init again";
+    :(::);
+    ];
+  
+  $[null root;
+    .require.location.root:.require.i.getCwd[];
+    .require.location.root:root
+    ];
+  
+  .require.i.setDefaultInterfaces[];
+  
+  (.require.markLibAsLoaded;.require.markLibAsInited)@\:`require;
+  
+  / If file tree has already been specified, don't overwrite
+  if[.require.location.discovered~enlist`;
+    .require.rescanRoot[];
+    ];
+  
+  .require.i.initInterfaceLibrary[];
+
+  .log.if.info "Require library initialised [ Root: ",string[.require.location.root]," ]";
+  }

@@ -1,0 +1,14 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Checks whether the input is a directory
+//
+// @param folder {symbol} Data to check
+//
+// @returns {boolean} Indication whether the input is a directory
+//
+// @private
+{[folder]
+  :(not ()~fc) & not folder~fc:key folder;
+  }

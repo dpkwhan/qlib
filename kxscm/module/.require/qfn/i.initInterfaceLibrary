@@ -1,0 +1,18 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Initialise and defer interface management to the Interface library (if)
+//
+// @returns {null} Nothing
+//
+// @see .require.interfaces
+// @see .if.setImplementationsFor
+//
+// @private
+{
+  .require.libNoInit`if;
+  requiredIfs:0!`lib xgroup .require.interfaces;
+  {.if.setImplementationsFor[x`lib;flip `lib _ x]} each requiredIfs;
+  .require.lib`if;
+  }

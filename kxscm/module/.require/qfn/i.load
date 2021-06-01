@@ -1,0 +1,37 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Attempts to load the specified library.
+//
+// @param libName {symbol} A fully qualified library name as a symbol
+//
+// @returns {null} Nothing
+//
+// @throws LibraryDoesNotExistException If no files are found for the specified library
+// @throws LibraryLoadException If any of the library files fail to load
+//
+// @private
+{[libName]
+  .log.if.info "Loading library: ",string libName;
+  
+  libFiles:.require.i.findFiles[libName;.require.location.discovered];
+  
+  if[0~count libFiles;
+    .log.if.error "No files found for library [ Lib: ",string[libName]," ]";
+    '"LibraryDoesNotExistException (",string[libName],")";
+    ];
+  
+  {
+    .log.if.info "Loading ",x;
+    loadRes:@[system;"l ",x;{ (`LOAD_FAILURE;x) }];
+
+    if[`LOAD_FAILURE~first loadRes;
+      .log.if.error "Library file failed to load! [ File: ",x," ]. Error - ",last loadRes;
+      '"LibraryLoadException";
+      ];
+    } each 1_/:string libFiles;
+    
+  .require.markLibAsLoaded libName;
+  .require.loadedLibs[libName]:enlist[`files]!enlist libFiles;
+  }
