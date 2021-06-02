@@ -1,0 +1,7 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Cache of the command line arguments once they have been parsed once for improved 
+// performance on multiple calls
+`get`getWithInternal!(();())
