@@ -1,0 +1,14 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview This function provides addition parsing on top of the standard ``.Q.opt`` 
+// parsing for all command line arguments (including kdb internal single-character arguments).
+//
+// @returns {dict} Argument parameter as keys with the argument values
+//
+// @see .z.X
+{
+  if[()~.cargs.cache`getWithInternal;.cargs.cache[`getWithInternal]:.cargs.parse .z.X;];
+  :.cargs.cache`getWithInternal;
+  }

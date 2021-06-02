@@ -1,0 +1,16 @@
+// @author David Han
+//
+// @kind function
+//
+// @fileOverview This function provides additional parsing on top of the standard ``.Q.opt`` 
+// parsing for user-specified command line arguments.
+//
+// @returns {dict} Argument parameter as keys with the argument values
+//
+// @see .z.x
+//
+// @qlintsuppress RESERVED_NAME
+{
+  if[() ~ .cargs.cache`get;.cargs.cache[`get]:.cargs.parse .z.x;];
+  :.cargs.cache`get;
+  }
