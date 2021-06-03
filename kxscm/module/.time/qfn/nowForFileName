@@ -1,0 +1,17 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts current date and time to a file name friendly representation. Format is 
+// 'yyyymmdd_hhMMss_SSS'.
+// 
+// @returns {string} A file name friendly representation of the current date and time
+//
+// @see .time.nowAsTime
+// @see .time.today
+{
+  timeNow:.time.nowAsTime[];
+  ddmmss:`second$timeNow;
+  millis:`long$timeNow mod 1000;
+  :except[;".:"] string[.time.today[]],"_",string[ddmmss],"_",string millis;
+  }

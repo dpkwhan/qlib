@@ -1,0 +1,10 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Gives the current date and time rounded to the nearest millisecond.
+//
+// @returns {timestamp} Current time as timestamp but rounded to the nearest millisecond
+{
+  .time.today[]+.time.nowAsTime[]
+  }

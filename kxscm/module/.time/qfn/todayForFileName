@@ -1,0 +1,10 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts current date to a string with format ``yyyymmdd``.
+//
+// @returns {string} A file name friendly representation of the current date
+{
+  except[;"."] string .time.today[]
+  }

@@ -1,0 +1,14 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Converts a date to three-character representation of week day.
+//
+// @param dt {date} The date to get the day of
+//
+// @returns {symbol} 3 letter abbrieviation of the day of the specified date
+//
+// @see .time.days
+{[dt]
+  .time.days dt mod 7
+  }

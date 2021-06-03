@@ -1,0 +1,8 @@
+// @author Jaskirat Rajasansir
+//
+// @fileOverview Gives the time difference of the current process.
+//
+// @returns {time} The time difference of the current process
+{
+  .z.T - .z.t
+  }

@@ -1,0 +1,14 @@
+// @author Jaskirat Rajasansir
+//
+// @kind function
+//
+// @fileOverview Rounds nanosecond precision timestamps and timespans to milliseconds.
+//
+// @param x {timestamp|timespan} The time to convert
+//
+// @returns {long} Time as milliseconds
+{
+  if[not any .type[`isTimestamp`isTimespan] @\: x;'"IllegalArgumentException";];
+  if[.type.isInfinite x;:x;];
+  :.Q.t[abs type x]$1000000*(`long$x) div 1000000;
+  }

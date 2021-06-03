@@ -1,0 +1,6 @@
+// @author Jaskirat Rajasansir
+//
+// @kind data
+//
+// @fileOverview Day integer (from ``mod``) to 3 letter abbrieviation mapping.
+`sat`sun`mon`tue`wed`thu`fri

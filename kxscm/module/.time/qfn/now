@@ -1,0 +1,8 @@
+// @author Jaskirat Rajasansir
+//
+// @fileOverview Gives the current date and time with nanosecond precision.
+//
+// @returns {timestamp} The current date and time to nanosecond precision
+{
+  .z.p
+  }
